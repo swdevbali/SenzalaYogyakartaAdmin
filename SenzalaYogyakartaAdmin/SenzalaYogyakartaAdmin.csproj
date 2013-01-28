@@ -50,16 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainLibrary.cs" />
+    <Compile Include="ManagementSiswa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ManagementSiswa.Designer.cs">
+      <DependentUpon>ManagementSiswa.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Siswa.cs" />
+    <Compile Include="SiswaProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SiswaProperty.Designer.cs">
+      <DependentUpon>SiswaProperty.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ManagementSiswa.resx">
+      <DependentUpon>ManagementSiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SiswaProperty.resx">
+      <DependentUpon>SiswaProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
