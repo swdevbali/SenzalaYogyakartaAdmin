@@ -53,12 +53,14 @@ namespace SenzalaYogyakartaAdmin
                 IMongoQuery query = Query.EQ("nama", listSiswa.Text);
                 Siswa detailSiswa = MainLibrary.getInstance().siswaCol.FindOneAs<Siswa>(query);
                 pnlDetail.Controls.Clear();
+                pnlDetail.BackgroundImage = null;
                 pnlDetail.Controls.Add(new SiswaProperty(detailSiswa, this));
                 this.Cursor = Cursors.Default;
             }
             else
             {
                 pnlDetail.Controls.Clear();
+                pnlDetail.BackgroundImage = new Bitmap(SenzalaYogyakartaManajemenSiswa.Properties.Resources.senzalajogja);
                 lblInfoEmpty.Text = "Pilih nama siswa untuk menampilkan detailnya";
                 pnlDetail.Controls.Add(lblInfoEmpty);
             }
