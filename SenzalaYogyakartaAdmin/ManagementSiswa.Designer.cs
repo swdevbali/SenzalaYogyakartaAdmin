@@ -41,6 +41,8 @@
             this.hapusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +55,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 24);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -79,6 +82,9 @@
             // 
             // pnlDetail
             // 
+            this.pnlDetail.BackColor = System.Drawing.Color.White;
+            this.pnlDetail.BackgroundImage = global::SenzalaYogyakartaManajemenSiswa.Properties.Resources.senzalajogja;
+            this.pnlDetail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlDetail.Controls.Add(this.lblInfoEmpty);
             this.pnlDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDetail.Location = new System.Drawing.Point(0, 0);
@@ -91,15 +97,16 @@
             this.lblInfoEmpty.AutoSize = true;
             this.lblInfoEmpty.Location = new System.Drawing.Point(12, 9);
             this.lblInfoEmpty.Name = "lblInfoEmpty";
-            this.lblInfoEmpty.Size = new System.Drawing.Size(224, 13);
+            this.lblInfoEmpty.Size = new System.Drawing.Size(359, 13);
             this.lblInfoEmpty.TabIndex = 0;
-            this.lblInfoEmpty.Text = "Pilih nama siswa untuk menampilkan detailnya";
+            this.lblInfoEmpty.Text = "Koneksi ke basis data terlebih dahulu untuk mulai memasukkan data siswa";
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.siswaToolStripMenuItem});
+            this.siswaToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(487, 24);
@@ -135,6 +142,7 @@
             this.siswaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tambahToolStripMenuItem,
             this.hapusToolStripMenuItem});
+            this.siswaToolStripMenuItem.Enabled = false;
             this.siswaToolStripMenuItem.Name = "siswaToolStripMenuItem";
             this.siswaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.siswaToolStripMenuItem.Text = "&Siswa";
@@ -142,15 +150,17 @@
             // tambahToolStripMenuItem
             // 
             this.tambahToolStripMenuItem.Name = "tambahToolStripMenuItem";
-            this.tambahToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tambahToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.tambahToolStripMenuItem.Text = "&Tambah";
             this.tambahToolStripMenuItem.Click += new System.EventHandler(this.tambahToolStripMenuItem_Click);
             // 
             // hapusToolStripMenuItem
             // 
+            this.hapusToolStripMenuItem.Enabled = false;
             this.hapusToolStripMenuItem.Name = "hapusToolStripMenuItem";
             this.hapusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hapusToolStripMenuItem.Text = "&Hapus";
+            this.hapusToolStripMenuItem.Click += new System.EventHandler(this.hapusToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -168,6 +178,21 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(154, 17);
             this.toolStripStatusLabel1.Text = "Beta version for testing only";
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // ManagementSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +205,7 @@
             this.Name = "ManagementSiswa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrasi Siswa Capoeira Senzala Yogyakarta";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -211,6 +237,8 @@
         private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label lblInfoEmpty;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

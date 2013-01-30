@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SenzalaYogyakartaAdmin
 {
@@ -30,13 +29,20 @@ namespace SenzalaYogyakartaAdmin
             
         }
 
-        public void connect()
+        public bool connect()
         {
-            client = new MongoClient(connectionString);
-            server = client.GetServer();
-            db = server.GetDatabase("senzalayogyakarta");
-
-            siswaCol = db.GetCollection<Siswa>("siswa");
+            try
+            {
+                client = new MongoClient(connectionString);
+                server = client.GetServer();
+                db = server.GetDatabase("senzalayogyakarta");
+                siswaCol = db.GetCollection<Siswa>("siswa");
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -63,9 +63,25 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnBatal = new System.Windows.Forms.Button();
+            this.txtApilido = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cboKelas = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cboLevel = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.picFoto = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTwitter = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtFacebook = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -211,6 +227,7 @@
             this.txtAlamatAsal.Location = new System.Drawing.Point(3, 3);
             this.txtAlamatAsal.Multiline = true;
             this.txtAlamatAsal.Name = "txtAlamatAsal";
+            this.txtAlamatAsal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAlamatAsal.Size = new System.Drawing.Size(266, 135);
             this.txtAlamatAsal.TabIndex = 0;
             // 
@@ -260,7 +277,7 @@
             "Karyawan"});
             this.cboStatusTipe.Location = new System.Drawing.Point(159, 394);
             this.cboStatusTipe.Name = "cboStatusTipe";
-            this.cboStatusTipe.Size = new System.Drawing.Size(121, 21);
+            this.cboStatusTipe.Size = new System.Drawing.Size(159, 21);
             this.cboStatusTipe.TabIndex = 9;
             // 
             // label8
@@ -275,7 +292,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(286, 394);
+            this.label9.Location = new System.Drawing.Point(327, 397);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 13);
             this.label9.TabIndex = 21;
@@ -293,9 +310,9 @@
             "Kelas",
             "Jurusan",
             "Bidang"});
-            this.cboStatusDi.Location = new System.Drawing.Point(307, 394);
+            this.cboStatusDi.Location = new System.Drawing.Point(348, 394);
             this.cboStatusDi.Name = "cboStatusDi";
-            this.cboStatusDi.Size = new System.Drawing.Size(121, 21);
+            this.cboStatusDi.Size = new System.Drawing.Size(188, 21);
             this.cboStatusDi.TabIndex = 10;
             // 
             // txtKeluhanKesehatan
@@ -303,6 +320,7 @@
             this.txtKeluhanKesehatan.Location = new System.Drawing.Point(159, 421);
             this.txtKeluhanKesehatan.Multiline = true;
             this.txtKeluhanKesehatan.Name = "txtKeluhanKesehatan";
+            this.txtKeluhanKesehatan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtKeluhanKesehatan.Size = new System.Drawing.Size(276, 52);
             this.txtKeluhanKesehatan.TabIndex = 12;
             // 
@@ -329,6 +347,7 @@
             this.txtBeladiriYangPernahDiikuti.Location = new System.Drawing.Point(159, 479);
             this.txtBeladiriYangPernahDiikuti.Multiline = true;
             this.txtBeladiriYangPernahDiikuti.Name = "txtBeladiriYangPernahDiikuti";
+            this.txtBeladiriYangPernahDiikuti.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBeladiriYangPernahDiikuti.Size = new System.Drawing.Size(276, 52);
             this.txtBeladiriYangPernahDiikuti.TabIndex = 13;
             // 
@@ -337,6 +356,7 @@
             this.txtMotivasi.Location = new System.Drawing.Point(159, 537);
             this.txtMotivasi.Multiline = true;
             this.txtMotivasi.Name = "txtMotivasi";
+            this.txtMotivasi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMotivasi.Size = new System.Drawing.Size(276, 52);
             this.txtMotivasi.TabIndex = 14;
             // 
@@ -401,10 +421,167 @@
             this.btnBatal.UseVisualStyleBackColor = true;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
+            // txtApilido
+            // 
+            this.txtApilido.Location = new System.Drawing.Point(561, 157);
+            this.txtApilido.Multiline = true;
+            this.txtApilido.Name = "txtApilido";
+            this.txtApilido.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtApilido.Size = new System.Drawing.Size(183, 49);
+            this.txtApilido.TabIndex = 34;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(481, 160);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 13);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "Apilido";
+            // 
+            // cboKelas
+            // 
+            this.cboKelas.AutoCompleteCustomSource.AddRange(new string[] {
+            "Pria",
+            "Wanita"});
+            this.cboKelas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboKelas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboKelas.FormattingEnabled = true;
+            this.cboKelas.Items.AddRange(new object[] {
+            "DSC",
+            "GSP",
+            "UST"});
+            this.cboKelas.Location = new System.Drawing.Point(561, 219);
+            this.cboKelas.Name = "cboKelas";
+            this.cboKelas.Size = new System.Drawing.Size(121, 21);
+            this.cboKelas.TabIndex = 36;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(481, 219);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(33, 13);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Kelas";
+            // 
+            // cboLevel
+            // 
+            this.cboLevel.AutoCompleteCustomSource.AddRange(new string[] {
+            "Pria",
+            "Wanita"});
+            this.cboLevel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboLevel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboLevel.FormattingEnabled = true;
+            this.cboLevel.Items.AddRange(new object[] {
+            "--",
+            "Putih",
+            "Kuning",
+            "Oranye"});
+            this.cboLevel.Location = new System.Drawing.Point(561, 246);
+            this.cboLevel.Name = "cboLevel";
+            this.cboLevel.Size = new System.Drawing.Size(121, 21);
+            this.cboLevel.TabIndex = 38;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(481, 246);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(33, 13);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Level";
+            // 
+            // picFoto
+            // 
+            this.picFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picFoto.Location = new System.Drawing.Point(484, 13);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(219, 135);
+            this.picFoto.TabIndex = 40;
+            this.picFoto.TabStop = false;
+            this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(495, 23);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(136, 13);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "Klik disini untuk upload foto";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(481, 273);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 13);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(561, 270);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(121, 20);
+            this.txtEmail.TabIndex = 44;
+            // 
+            // txtTwitter
+            // 
+            this.txtTwitter.Location = new System.Drawing.Point(561, 296);
+            this.txtTwitter.Name = "txtTwitter";
+            this.txtTwitter.Size = new System.Drawing.Size(121, 20);
+            this.txtTwitter.TabIndex = 46;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(481, 299);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 13);
+            this.label20.TabIndex = 45;
+            this.label20.Text = "Twitter";
+            // 
+            // txtFacebook
+            // 
+            this.txtFacebook.Location = new System.Drawing.Point(561, 322);
+            this.txtFacebook.Name = "txtFacebook";
+            this.txtFacebook.Size = new System.Drawing.Size(121, 20);
+            this.txtFacebook.TabIndex = 48;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(481, 325);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 13);
+            this.label21.TabIndex = 47;
+            this.label21.Text = "Facebook";
+            // 
             // SiswaProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtFacebook);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.txtTwitter);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.picFoto);
+            this.Controls.Add(this.cboLevel);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.cboKelas);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtApilido);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.txtEmergencyCall);
@@ -437,12 +614,13 @@
             this.Controls.Add(this.txtNoFormulir);
             this.Controls.Add(this.label1);
             this.Name = "SiswaProperty";
-            this.Size = new System.Drawing.Size(624, 687);
+            this.Size = new System.Drawing.Size(703, 687);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,6 +663,21 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.Button btnBatal;
+        private System.Windows.Forms.TextBox txtApilido;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cboKelas;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cboLevel;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox picFoto;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTwitter;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtFacebook;
+        private System.Windows.Forms.Label label21;
 
     }
 }

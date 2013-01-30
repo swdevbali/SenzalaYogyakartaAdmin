@@ -12,7 +12,7 @@ namespace SenzalaYogyakartaAdmin
         public string nama { get; set; }
         public string alamat_asal { get; set; }
         public string alamat_jogja { get; set; }
-        public List<string> beladiri_sebelumnya { get; set; }
+        public string beladiri_sebelumnya { get; set; }
         public string emergency_call_number { get; set; }
         public string emergency_call_status { get; set; }
         public string gol_darah { get; set; }
@@ -26,7 +26,11 @@ namespace SenzalaYogyakartaAdmin
         public string tahu_capoeira_dari { get; set; }
         public string tempat_lahir { get; set; }
         public DateTime tgl_lahir { get; set; }
-
-
+        public string kelas { get; set; }
+        public string facebook { get; set; }
+        public string email { get; set; }
+        public string twitter { get; set; }
+        public string level { get; set; }
+        public string apilido { get; set; }
     }
 }

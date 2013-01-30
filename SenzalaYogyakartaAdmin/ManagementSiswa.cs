@@ -7,7 +7,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SenzalaYogyakartaAdmin
@@ -29,13 +28,21 @@ namespace SenzalaYogyakartaAdmin
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            MainLibrary.getInstance().connect();
-            listSiswa.Items.Clear();
-            foreach (Siswa siswa in MainLibrary.getInstance().siswaCol.FindAllAs<Siswa>())
+            if (MainLibrary.getInstance().connect())
             {
-                listSiswa.Items.Add(siswa.nama);
+                listSiswa.Items.Clear();
+                foreach (Siswa siswa in MainLibrary.getInstance().siswaCol.FindAllAs<Siswa>())
+                {
+                    listSiswa.Items.Add(siswa.nama);
+                }
+                siswaToolStripMenuItem.Enabled = true;
+                lblInfoEmpty.Text = "Pilih nama siswa untuk menampilkan detailnya"; 
+                this.Cursor = Cursors.Default;
             }
-            this.Cursor = Cursors.Default;
+            else
+            {
+                MessageBox.Show("Sorry, ada kesalahan koneksi. Belum bayar pulsa internet kali mas?", Application.ProductName);
+            }
         }
 
         private void listSiswa_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,6 +56,13 @@ namespace SenzalaYogyakartaAdmin
                 pnlDetail.Controls.Add(new SiswaProperty(detailSiswa, this));
                 this.Cursor = Cursors.Default;
             }
+            else
+            {
+                pnlDetail.Controls.Clear();
+                lblInfoEmpty.Text = "Pilih nama siswa untuk menampilkan detailnya";
+                pnlDetail.Controls.Add(lblInfoEmpty);
+            }
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +72,7 @@ namespace SenzalaYogyakartaAdmin
 
         private void tambahToolStripMenuItem_Click(object sender, EventArgs e)
         {   
-            listSiswa.Items.Add(new Siswa());
+            listSiswa.Items.Add("*new*");
             listSiswa.SelectedIndex = listSiswa.Items.Count - 1;
         }
 
@@ -66,6 +80,31 @@ namespace SenzalaYogyakartaAdmin
         internal void updateListSiswa(string p)
         {
             listSiswa.Items[listSiswa.SelectedIndex] = p;
+        }
+
+        internal void batal()
+        {
+            if(listSiswa.Text=="*new*")
+            {
+                listSiswa.Items.RemoveAt(listSiswa.SelectedIndex);
+            }
+            listSiswa.SelectedIndex = -1;
+        }
+
+        private void hapusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bener mau dihapus?", Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MainLibrary.getInstance().siswaCol.Remove(Query.EQ("nama", listSiswa.Text));
+                listSiswa.Items.RemoveAt(listSiswa.SelectedIndex);
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 about = new AboutBox1();
+            about.ShowDialog();
+
         }
     }
 }

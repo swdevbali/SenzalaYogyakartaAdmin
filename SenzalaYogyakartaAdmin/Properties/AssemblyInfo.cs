@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SenzalaYogyakartaAdmin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Senzala Yogyakarta - Manajemen Siswa")]
+[assembly: AssemblyDescription("Aplikasi ini dikembangkan untuk memudahkan pengurus Capoeira Senzala Yogyakarta dalam memonitor pendaftaran dan perkembangan siswa.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SenzalaYogyakartaAdmin")]
+[assembly: AssemblyCompany("Swdev Bali")]
+[assembly: AssemblyProduct("Senzala Yogyakarta - Manajemen Siswa")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
