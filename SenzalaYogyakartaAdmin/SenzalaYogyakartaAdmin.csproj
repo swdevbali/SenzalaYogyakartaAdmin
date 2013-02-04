@@ -39,10 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MongoDB.Bson">
-      <HintPath>..\..\..\..\..\..\..\Desktop\CSharpDriver-1.7.0.4714\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\References\MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
-      <HintPath>..\..\..\..\..\..\..\Desktop\CSharpDriver-1.7.0.4714\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\References\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaunchBar.Designer.cs">
+      <DependentUpon>LaunchBar.cs</DependentUpon>
     </Compile>
     <Compile Include="MainLibrary.cs" />
     <Compile Include="ManagementSiswa.cs">
@@ -79,6 +85,9 @@
     </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchBar.resx">
+      <DependentUpon>LaunchBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagementSiswa.resx">
       <DependentUpon>ManagementSiswa.cs</DependentUpon>
@@ -117,6 +126,10 @@
     <Content Include="icon\capoeira-icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\capoeira close.png" />
+    <None Include="Resources\capoeira siswa.PNG" />
+    <None Include="Resources\senzala emblem.PNG" />
+    <None Include="Resources\senzala.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

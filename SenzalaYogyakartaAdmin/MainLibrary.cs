@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SenzalaYogyakartaAdmin
 {
@@ -14,6 +15,7 @@ namespace SenzalaYogyakartaAdmin
         MongoServer server;
         MongoDatabase db;
         public MongoCollection siswaCol;
+        public static SenzalaYogyakartaManajemenSiswa.LaunchBar launchBar;
 
         private MainLibrary()
         {
@@ -43,6 +45,19 @@ namespace SenzalaYogyakartaAdmin
                 return false;
             }
             return true;
+        }
+
+        internal void displayModule(Form module)
+        {
+            launchBar.Hide(); //TODO : animate
+            module.FormClosed += new FormClosedEventHandler(this.closeModul);
+            module.Show();
+        }
+
+        private void closeModul(object sender, FormClosedEventArgs e)
+        {
+            Form module = (Form)sender;
+            launchBar.Show();
         }
     }
 }

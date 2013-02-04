@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SenzalaYogyakartaManajemenSiswa;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,7 +16,9 @@ namespace SenzalaYogyakartaAdmin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagementSiswa());
+            LaunchBar launchBar = new LaunchBar();
+            MainLibrary.launchBar = launchBar;
+            Application.Run(launchBar);
         }
     }
 }

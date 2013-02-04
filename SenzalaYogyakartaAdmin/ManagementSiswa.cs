@@ -108,5 +108,7 @@ namespace SenzalaYogyakartaAdmin
             about.ShowDialog();
 
         }
+
+       
     }
 }
